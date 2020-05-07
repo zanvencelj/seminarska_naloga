@@ -1,0 +1,228 @@
+/**
+*    MADE BY:
+*    Žan Vencelj
+**/
+
+html{
+    background-color: #bdc3c7;
+}
+
+#mh1{
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px){
+    #mh1{
+        margin: 0;
+        font-size: 2rem;
+    }
+}
+
+/* VSEBINA */
+
+.mheader{
+    background-color: #34495e;
+}
+
+#backbtn {
+    position: absolute;
+    top: 2.4rem;
+    left: 1rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#backbtn a:hover {
+    color: #141414;
+}
+
+.muvod,
+.mizdelava,
+.mprenos{
+    color: #1e272e;
+}
+
+.mlastnosti{
+    background-color: #34495e;
+    padding: 0.5rem 0;
+    color: #ecf0f1;
+    border-radius: 1rem;
+}
+
+.mimg{
+    width: 80%;
+    border-radius: 0.5rem;
+    left: 50%;
+    margin: 0.8rem 0 0 0.8rem;
+    transition: 0.5s;
+}
+
+@media (min-width: 1024px){
+    .mimg{
+        width: 40%;
+        float: right;
+    }
+    .mimg:hover{
+        width: 45%;
+    }    
+}
+
+h3{
+    margin: 0.8rem;
+    font-size: 1.8rem;
+}
+
+h4{
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    text-shadow: 1px 1px 2px black;
+}
+
+/*
+.mmaintext{
+    text-align: justify;
+}
+*/
+
+.lastnosti {
+    width: 80%;
+    height: 8rem;
+    margin: auto;
+}
+
+.cena,
+.varnost,
+.kolicina {
+    float: left;
+    padding: 1rem;
+    width: 30%;
+    background-color: cadetblue;
+    border-radius: 0 1rem;
+    margin: 0.5rem 0.5rem;
+    transition: 0.3s;
+}
+@media (max-width: 425px) {
+    .cena,
+    .varnost,
+    .kolicina {
+        width: 80%;
+    }
+}
+
+.cena:hover,
+.varnost:hover,
+.kolicina:hover {
+    background-color: steelblue;
+}
+
+.download {
+    background-color: #34495e;
+    padding: 0.8rem;
+    border-radius: 0.7rem;
+    transition: 0.5s;
+    user-select: none;
+}
+
+.download:hover {
+    background-color: #7f8c8d;
+}
+
+code {
+    background-color: #95a5a6;
+    border-radius: 3px;
+    padding: 1px 3px;
+}
+
+iframe {
+    width: 70%;
+}
+
+@media (max-width: 425px) {
+    iframe {
+        width: 100%;
+    }
+}
+
+#pastebinfull {
+    color: #8e44ad;
+    transition: 0.4s;
+    font-weight: 600;
+}
+
+#pastebinfull:hover {
+    color: #9b59b6;
+    word-spacing: 4px;
+}
+
+.mfooter{
+    background-color: #34495e;
+    padding: 1rem;
+    color: #bdc3c7;
+}
+
+.mfooter h3 {
+    margin: 0.4rem 0;
+}
+
+.mmeni,
+.msocials,
+.msites {
+    float: left;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: 33.3%;
+    cursor: pointer;
+}
+
+#copy{
+    color: #1e272e;
+    font-weight: 700;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .mmeni,.msocials,.msites,#mfooter {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    #backbtn {
+        display: none;
+    }
+}
+
+/* ŠIRINA STRANI */
+
+.msection {
+    padding: 2rem;
+}
+
+.mcontainer{
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .mcontainer {
+        width: 710px;
+    }
+}
+
+@media (min-width: 992px) {
+    .mcontainer {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .mcontainer {
+        width: 1170px;
+    }
+}

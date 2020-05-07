@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Vencelj &bull; Mail Sender</title>
+    <link rel="icon" href="../slike/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../CSS/mails.css">
+</head>
+
+<body>
+    <div class="msection mheader">
+        <div class="mcontainer" id="mheader">
+            <h2 id="mh1">Program za pošiljanje mailov</h2>
+            <span id="backbtn"><a href="../index.html">&#8249; Nazaj</a></span>
+        </div>
+    </div>
+    <div class="msection">
+        <div class="mcontainer muvod">
+            <img src="../slike/posiljanje-mailov-app.png" alt="Email Sending" class="mimg">
+            <div class="mmaintext">
+                <h3>UVOD</h3>
+                <p>To je program, ki samodejno pošilja maile (v obliki HTML) veliki količini prejemnikov. Program sem začel delati, ker je oče potreboval program za oglaševanje spletne trgovine a so programi za pošiljanje oglasov preko maila precej dragi (najcenejši so približno 100€ na mesec za enkratno pošiljanje do 50.000 prejemnikom).</p>
+                <div class="clearboth"></div>
+            </div>
+        </div>
+    </div>
+    <div class="msection">
+        <div class="mcontainer mlastnosti">
+            <div class="mmaintext">
+                <div class="lastnosti">
+                    <h3>Prednosti</h3>
+                    <p>Plačljivi programi za pošiljanje mailov imajo kar nekaj slabosti, tukaj pa je nekaj glavnih izboljšav, ki so na tem programu.</p>
+                    <br>
+                    <div class="cena">
+                        <h4>Cena</h4>
+                        <p>Programi za pošiljanje oglasov so zelo dragi, ta program pa lahko uporabljam zastonj.</p>
+                    </div>
+                    <div class="varnost">
+                        <h4>Varnost</h4>
+                        <p>Drugi programi si zapomnijo gesla in jih shanijo, ta program pa vedno zahteva prijavo in ne shranjuje gesel, zato je program 100% varen.</p>
+                    </div>
+                    <div class="kolicina">
+                        <h4>Količina</h4>
+                        <p>Običajno so programi omejeni na poslane maile na mesec, z tem programom pa lahko pošiljam neomejeno mailov.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearboth"></div>
+    <div class="msection">
+        <div class="mcontainer mizdelava">
+            <div class="maintext">
+                <h3>Postopek izdelave</h3>
+                <p>Najprej sem si ogledal veliko tutorialov na YouTubu za začetek o povezovanju na strežnike in določene porte z pythonom, potem pa še bolj podrobno o googlovih strežnikih. Potem sem naredil kratko skripto za pošiljanje mailov da sem testiral kateri port deluje najbolje in kakšen je najboljši način za pošiljanje (ne pošilja pod vsiljeno pošto , čimlepše prikaže ljudem...). Tukaj je koda prvega programa z katerim sem testiral pošiljanje:</p><br>
+                <iframe src="https://pastebin.com/embed_iframe/RPkThffn" style="border-radius: 0.5rem;border: none; height: 30rem;" id="1pastebin"></iframe>
+                
+                <p>Potem sem se odločil program poenostaviti, da nebi potreboval vsakič mailov vnašati v skripto ampak bi maile samo enostavno vnesel v excel datoteko, za kar sem se moral naučiti še uporabe modula <b>Pandas</b>, ki omogoča branje xlsx datotek (Excel datotek). Tako sem v kodo namesto <code>maili = ['prejemnik@domena.com']</code> dodal te ukaze:</p>
+                <iframe src="https://pastebin.com/embed_iframe/qhhEZSKD" style="border-radius: 0.5rem;border: none; height: 5rem;" id="2pastebin"></iframe>
+                <p>in nastavil prejemnike iz <code>msg['To'] = maili[x]</code> na <code>msg['To'] =  maili['maili'][x]</code>.</p>
+                <br>
+                <p>Potem sem se odločil da bom svojemu programu dodal še notranji izgled saj je do zdaj vse delovanje aplikacije delovalo le v command promptu (CMD), kar ni ravno prijazno do uporabnika, zato sem se začel učiti še o modulu <b>tkInter</b>, ki se uporablja za izdelovanje grafičnega interfaca (izgleda aplikacije) v Pythonu. TkInterja sem se zelo hitro naučil saj je na internetu zelo veliko tutorialov in formuov z katerimi sem si lahko pomagal. <br> Za začetek sem pripravil samo obliko aplikacije posebaj z spodnjo kodo: </p>
+                <iframe src="https://pastebin.com/embed_iframe/N6dQGacv" style="border-radius: 0.5rem;border: none; height: 30rem;" id="3pastebin"></iframe>
+                <p>Nato sem programu dodal še orodno vrstico, ki za enkrat še ne dela skoraj nič:</p>
+                <iframe src="https://pastebin.com/embed_iframe/1E1rciNZ" style="border-radius: 0.5rem;border: none; height: 30rem;" id="4pastebin"></iframe>
+                <p>Ko sem končal z grafičnim vmesnikom, sem popravil še nekaj spremenljivk za lažjo uporabo aplikacije:</p>
+                <pre>
+    mojmail = ''        &#8250;    mojmail = moj_mail.get()
+    mojegeslo = ''      &#8250;    mojegeslo = moje_geslo.get()
+    x = 0               &#8250;    x = 0
+    ST = 250            &#8250;    ST = maili['st'][0]
+                </pre>
+                <p>To so vsi veliki koraki, pri izdelavi končno kodo lahko preverite <span><a href="https://pastebin.com/v4ypPcBd" id="pastebinfull">&#8250; tukaj &#8249;</a></span> ali pa prenesete na dnu strani. </p>
+            </div>
+        </div>
+    </div>
+    <div class="msection">
+        <div class="mcontainer mprenos" id="prenos">
+                <h3>Prenos</h3>
+                <p>Tukaj si lahko brezplačno prenesete aplikacijo za operacijske sisteme Windows.</p><br>
+                <span class="download"><a href="../files/maili.zip" download="Free-mailsending"><i class="fa fa-windows"></i> Prenos</a></span>
+        </div>
+        <br><br>
+    </div>
+    <div class="mfooter">
+        <div class="mcontainer">
+            <div class="mmeni">
+                <h3>Meni</h3>
+                <a href="../index.html#about" class="menuitem">O meni</a> <br>
+                <a href="../index.html#services" class="menuitem">Storitve</a> <br>
+                <a href="../index.html#knowledge" class="menuitem">Znanje</a> <br>
+                <a href="../index.html#contact" class="menuitem">Kontaktiraj me</a> <br>
+                <a href="../index.html#yttutoriali" class="menuitem">YouTube Tutoriali</a> <br>
+            </div>
+            <div class="msocials">
+                <h3>Sledi mi</h3>
+                <a href="https://www.youtube.com/channel/UCiVZFEJpSr1A0ul5M_BwU8g?sub_confirmation=1" class="menuitem" target="_blank">YouTube</a><br>
+                <a href="https://www.instagram.com/zanvencelj/" class="menuitem" target="_blank">Instagram</a><br>
+                <a class="menuitem" onclick="mySnapchatfoot()">Snapchat</a><span id="msnapchatfoot"></span><br>
+                <a class="menuitem" onclick="myDiscordfoot()">Discord</a><span id="mdiscordfoot"></span><br>
+            </div>
+            <div class="msites">
+                <h3>Strani</h3>
+                <a href="https://naju.si" class="menuitem" target="_blank">Na-ju.si</a><br>
+                <a href="#" class="menuitem">Več bo tu kmalu...</a><br>
+            </div>
+            <div class="clearboth"></div>
+            <br id="mfooter">
+            <div id="copy">&copy; 2020 Žan Vencelj</div>
+        </div>
+    </div>
+    <script>
+        function mySnapchatfoot() {
+            document.getElementById("msnapchatfoot").innerHTML = "  @zanvencelj";
+        }
+        
+        function myDiscordfoot() {
+            document.getElementById("mdiscordfoot").innerHTML = "  zanvencelj#8708";
+        }
+    </script>
+</body>
+</html>

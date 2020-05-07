@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Vencelj &bull; Programing</title>
+    <link rel="icon" href="slike/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="backgroundcolor"></div>
+            <div class="background"></div>
+            <div class="language"><a href="en.html">en</a> / <a href="index.html">slo</a></div>
+            <div class="login"><a href="./login.php">Login</a></div>
+            <div class="htext">
+                <h1>Žan Vencelj</h1>
+                <span class="podnaslov">Programing</span>
+            </div>
+            <div class="navbar">
+                <div class="navcontainer">
+                    <a href="#about" class="navitem">About me</a>
+                    <a href="#services" class="navitem">Services</a>
+                    <a href="#knowledge" class="navitem">Knowledge</a>
+                    <a href="#contact" class="navitem">Contact Me</a>
+                </div>
+            </div>
+        </div>
+        <div class="sections">
+            <div class="container">
+                <div class="section" id="about">
+                    <div class="seccontent">
+                        <h2>About Me</h2>
+                        <p>My name is Žan Vencelj. I'm 15 years old. I'm in the high school named <a href="https://www.sc-nm.si/" class="scnm-link">SCNM</a> (<i>Šolski center Novo Mesto</i>) on the program of computer science. Most of my experiance is comming from experimenting on servers and programing for some friends of my parents. I also helped a lot of other server owners and created and sold some servers. However then I started learning about some HTML and proceeded to CSS, JavaScript and recently some PHP and some MySQL.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section" id="services">
+                    <div class="seccontent">
+                        <h2>Services</h2>
+                        <p>I can offer you the following things:</p>
+                        <div class="serviceitem">
+                            <img src="slike/website_design.png" alt="Web Design" id="web_design">
+                            <h3>Website Design</h3>
+                            Like a basic website with your choice of style/purpose. <br><br>
+                            <b>Languages:</b> HTML, CSS, JavaScript<i> (optional)</i> <br><br>
+                        </div>
+                        <div class="serviceitem">
+                            <a href="./podstrani/mails.html"><img src="slike/email_sending.png" alt="Email Sending" id="email_sending"></a>
+                            <a href="./podstrani/mails.html"><h3>Email sending</h3></a>
+                            Sending HTML and CSS script on mail with gmail servers. I have a few options for you to chose from. <br><br>
+                            <b>Languages:</b> Python, HTML and CSS <br>
+                        </div>
+                        <div class="serviceitem">
+                            <img src="slike/discord_bot.png" alt="Discord Bot" id="discord_bot">
+                            <h3>Discord Bot</h3>
+                            Discord bot for your Discord server with your own functions/purpose. I can do a lot of things with it as long as you have an idea of what you want it to do. It can listen to commands or events and do all kinds of things. <br><br>
+                            <b>Languages:</b> Python
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section" id="knowledge">
+                    <div class="seccontent">
+                        <h2>Knowledge</h2>
+                        <p>I know how to use the following programing languages:</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section" id="contact">
+                    <div class="seccontent">
+                        <h2>Contact Me</h2>
+                        <p>You can contact me through a lot of social media networks. There are the ones that I use the most:</p>
+                        <ul>
+                            <li class="contact" onclick="myGmail()">Gmail <span id="gmail"></span></li>
+                            <li class="contact" onclick="myDiscord()">Discord <span id="discord"></span></li>
+                            <li class="contact" onclick="myInstagram()">Instagram <span id="instagram"></span></li>
+                            <li class="contact" onclick="mySnapchat()">Snapchat <span id="snapchat"></span></li>
+                        </ul>
+                        <span id="navodilo"><i><u>Click on the text to get @!</u></i></span>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="section">
+                <h2 id="yttutoriali">Youtube Tutoriali</h2>
+            </div>
+            <div class="section">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <iframe src="https://www.youtube.com/embed/dDuFCnE3uOM" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+                    </div>
+                    <div class="mySlides fade">
+                        <iframe src="https://www.youtube.com/embed/VSZ2inGMb6Y" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+                    </div>
+                    <div class="mySlides fade">
+                        <iframe src="https://www.youtube.com/embed/Gl5ZFXH4uWA" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <br>
+        <div class="footer">
+            <div class="footitems">
+                <div class="menu">
+                    <h3>Menu</h3>
+                    <a href="#about" class="menuitem">About Me</a><br>
+                    <a href="#services" class="menuitem">Services</a><br>
+                    <a href="#knowledge" class="menuitem">Knowledge</a><br>
+                    <a href="#contact" class="menuitem">Contact Me</a><br>
+                    <a href="#yttutoriali" class="menuitem">YouTube Tutoriali</a>
+                </div>
+                <div class="socials">
+                    <h3>Follow Me</h3>
+                    <a href="https://www.youtube.com/channel/UCiVZFEJpSr1A0ul5M_BwU8g?sub_confirmation=1" class="menuitem" target="_blank">YouTube</a><br>
+                    <a href="https://www.instagram.com/zanvencelj/" class="menuitem" target="_blank">Instagram</a><br>
+                    <a class="menuitem" onclick="mySnapchatfoot()">Snapchat</a><span id="snapchatfoot"></span><br>
+                    <a class="menuitem" onclick="myDiscordfoot()">Discord</a><span id="discordfoot"></span><br>
+                </div>
+                <div class="sites">
+                    <h3>Sites</h3>
+                    <a href="https://naju.si" class="menuitem" target="_blank">Na-ju.si</a><br>
+                    <a href="#" class="menuitem">More comming soon...</a><br>
+                </div>
+                <div class="clearboth"></div>
+                <br>
+            </div>
+            <div class="copy">
+                <b>&copy;2020</b> Žan Vencelj
+            </div>
+        </div>
+    </div>
+    <script>
+        function mySnapchatfoot() {
+            document.getElementById("snapchatfoot").innerHTML = "  @zanvencelj";
+        }
+        
+        function myDiscordfoot() {
+            document.getElementById("discordfoot").innerHTML = "  zanvencelj#8708";
+        }
+        
+        function myGmail() {
+            document.getElementById("gmail").innerHTML = " info.vencelj@gmail.com";
+        }
+        
+        function myDiscord() {
+            document.getElementById("discord").innerHTML = " zanvencelj#8708";
+        }
+        
+        function myInstagram() {
+            document.getElementById("instagram").innerHTML = " @zanvencelj";
+        }
+        
+        function mySnapchat() {
+            document.getElementById("snapchat").innerHTML = " @zanvencelj";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace("active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>

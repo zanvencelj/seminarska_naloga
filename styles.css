@@ -1,0 +1,544 @@
+/* By Žan Vencelj */
+
+/* Essentials */
+
+html {
+    scroll-behavior: smooth;
+    background-color: #141414;
+}
+
+@media (max-width: 768px) {
+    :root{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    :root{
+        font-size: 0.8rem;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: whitesmoke;
+}
+
+h1 {
+    background: -webkit-linear-gradient(#fff, #fff, rgba(0, 0, 0, 0.5));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    margin-left: -6px;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+h2 {
+    position: relative;
+    display: inline-block;
+    margin: 0 0 1rem 1rem;
+    color: #fff;
+    font-size: 2rem;
+    text-align: left;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+    letter-spacing: 0.5rem;
+    pointer-events: none;
+    user-select: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+p {
+    margin: 0;
+    line-height: 1.75;
+}
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+	transition: all 0.2s ease;
+	outline: none;
+}
+
+/* Header */
+
+.header {
+    user-select: none;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.header .podnaslov {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    animation-delay: 1s;
+}
+
+.backgroundcolor {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: black;
+}
+
+.background {
+    position: absolute;
+    background: url("slike/background.jpg") no-repeat center center / cover;
+    opacity: 0.4;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.language{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #141414;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: #7f8c8d;
+}
+
+.language a{
+    color: #7f8c8d;
+}
+
+.language a:hover{
+    color: whitesmoke;
+}
+
+.login{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #141414;
+    border: 1px solid #333;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: #7f8c8d;
+}
+
+.login a{
+    color: #7f8c8d;
+}
+
+.login a:hover{
+    color: whitesmoke;
+}
+
+/* Navigation */
+
+.navbar {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 6.5%;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        display: none;
+    }
+}
+
+.navcontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+    border-radius: 1.3rem 1.3rem 0 0;
+    margin: auto;
+    background-color: #141414;
+}
+
+@media (max-width: 1024px){
+    .navcontainer{
+        width: 50%;
+    }
+}
+
+.navitem {
+    position: relative;
+    margin: 0 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.navitem::after {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 1.5px;
+    width: 0;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+
+.navitem:hover::after {
+    width: calc(100% - 3px);
+}
+
+.navitem:hover {
+    color: white;
+}
+
+/* Body */
+
+.sections {
+    margin-top: -0.25rem;
+    padding: 2rem 0;
+}
+
+.section {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .section {
+        width: 710px;
+    }
+}
+
+@media (min-width: 992px) {
+    .section {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .section {
+        width: 1170px;
+    }
+}
+
+.container{
+    margin: 2rem;
+}
+
+.seccontent {
+    padding: 3rem 4rem;
+    border-radius: 2rem;
+    background-color: #333;
+    margin: 1rem auto;
+    transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+	.seccontent {
+		padding: 2rem 2rem;
+	}
+}
+
+.seccontent:hover{
+    background-color: #251e3e;
+}
+
+.scnm-link {
+    color: aqua;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.scnm-link:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.serviceitem {
+    padding: 1rem;
+    border: solid 2px #666;
+    border-radius: 15px;
+    width: 50%;
+    margin: 0.5rem 0;
+    transition: 0.8s;
+}
+
+.serviceitem:hover {
+    background-color: #222;
+    width: 80%;
+    color: #fff;
+}
+
+.serviceitem b:hover {
+    text-shadow: 1px 1px 0.2px rgba(0, 0, 0, 1);
+}
+
+@media (max-width: 425px){
+    .serviceitem {
+        width: 100%;
+    }
+    .serviceitem:hover {
+        width: 100%
+    }
+}
+
+.serviceitem h3 {
+    cursor: default;
+    margin-top: 0;
+    padding: 1rem 0 0 0;
+    font-size: 2rem;
+    transition: 0.2s;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1)
+}
+
+#discord_bot, #email_sending, #web_design{
+    width: 20%;
+}
+
+#navodilo{
+    font-size: 0.8rem;
+}
+
+/*YouTube*/
+
+#yttutoriali{
+    transition: 0.5s;
+    margin: auto;
+    padding: 2rem;
+}
+
+.mySlides {
+    display: none;
+    height: 40rem;
+    border-width: 5px;
+    border-style: outset;
+    border-radius: 5px;
+}
+
+.slideshow-container {
+    position: relative;
+    margin: auto;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+    cursor: pointer;
+}
+
+.next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+.prev:hover,
+.next:hover {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    cursor: pointer;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+@media (max-width: 786px){
+    .dot, .slideshow-container, .mySlides, #yttutoriali{
+        display: none;
+    }
+}
+
+.active,
+.dot:hover {
+    background-color: gray;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+/* Footer */
+
+.footer,
+.footitems {
+    background-color: #333;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+    .menu,.socials,.sites{
+        display: none;
+    }
+}
+
+.copy {
+    text-align: center;
+    background-color: #141414;
+    font-size: 1rem;
+    padding: 1rem;
+    user-select: none;
+}
+
+.footitems {
+    width: 60%;
+    margin: auto;
+}
+
+.menu,
+.socials,
+.sites {
+    float: left;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: 33.3%;
+    background-color: #333;
+}
+
+.clearboth {
+    clear: both;
+}
+
+.menuitem {
+    position: relative;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-align: left;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.menuitem::after, #backbtn::after {
+    content: '';
+    position: absolute;
+    background: white;
+    height: 1.5px;
+    width: 0;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+}
+
+.menuitem:hover::after,#backbtn:hover::after {
+    width: calc(100% - 3px);
+}
+
+.menuitem:hover {
+    color: white;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+}
+
+.footitems h3 {
+    margin: 0;
+    padding: 0.5rem 0;
+    font-weight: 500
+}
+
+#snapchat,
+#discord,
+#gmail,
+#instagram,
+#snapchatfoot,
+#discordfoot {
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    transition: 0.5s;
+}
+
+#snapchat:hover,
+#discord:hover,
+#gmail:hover,
+#instagram:hover,
+#snapchatfoot:hover,
+#discordfoot:hover{
+    color: aqua;
+    opacity: 0.5;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
+}
+
+.contact {
+    cursor: pointer;
+}
+/* Scroll bar */
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+    background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border: solid 3px #141414;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
