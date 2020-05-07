@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Vencelj &bull; Programiranje</title>
+    
+    <meta name="author" content="Vencelj Žan">
+    <meta name="description" content="Official Žan Vencelj website">
+    <meta name="url" content="https://venceljzan.000webhostapp.com/">
+    <meta name="keywords" content="vencelj, zan, web developer, web designer, web design, html, css, js, php, mysql">
+    
+    <meta name="og:site_name" content="Vencelj Žan">
+    <meta name="og:title" content="Vencelj &bull; Programiranje">
+    <meta name="og:description" content="Official Žan Vencelj website.">
+    <meta name="og:url" content="https://venceljzan.000webhostapp.com/">
+    <meta name="og:image" content="slike/icon.png">
+    
+    <link rel="icon" href="slike/icon.png">
+
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="backgroundcolor"></div>
+            <div class="background"></div>
+            <div class="language"><a href="en.html">en</a> / <a href="index.html">slo</a></div>
+            <div class="login"><a href="./login.php">Prijava</a></div>
+            <div class="htext">
+                <h1>Žan Vencelj</h1>
+                <span class="podnaslov">Programiranje</span>
+            </div>
+            <div class="navbar">
+                <div class="navcontainer">
+                    <a href="#about" class="navitem">O meni</a>
+                    <a href="#services" class="navitem">Storitve</a>
+                    <a href="#knowledge" class="navitem">Znanje</a>
+                    <a href="#contact" class="navitem">Kontaktiraj me</a>
+                </div>
+            </div>
+        </div>
+        <div class="sections">
+            <div class="container">
+                <div class="section" id="about">
+                    <div class="seccontent">
+                        <h2>O meni</h2>
+                        <p>Jaz sem Žan Vencelj. Star sem 15 let. Obiskujem srednjo šolo po imenu <a href="https://www.sc-nm.si/" class="scnm-link">ŠCNM</a> (<i>Šolski center Novo Mesto</i>) in sicer program tehnik računalništva. Največ znanja sem pridobil z eksperimentiranjem z strežniki in programiranjem za prijatelje in mnoge očetove prijatelje. Prav tako sem pomagal številnik lastnikom večjih serverjev in ustvaril, ter prodal veliko serverjev. Potem sem se začel učiti o HTML-ju, CSS-ju in JavaScript-u, kar me je zelo zanimalo. Pred kratkim pa sem se začel zanimati še za nekaj PHP-ja in MySQL-a.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section" id="services">
+                    <div class="seccontent">
+                        <h2>Storitve</h2>
+                        <p>Ponudim vam lahko naslednje storitve:</p>
+                        <div class="serviceitem">
+                            <img src="slike/website_design.png" alt="Web Design" id="web_design">
+                            <h3>Spletne Strani</h3>
+                            Standardno spletno stran z obliko in namenom po izbiri. <br><br>
+                            <b>Jeziki:</b> HTML, CSS, JavaScript<i> (izbirno)</i> <br><br>
+                        </div>
+                        <div class="serviceitem">
+                            <a href="./podstrani/mails.html"><img src="slike/email_sending.png" alt="Email Sending" id="email_sending"></a>
+                            <a href="./podstrani/mails.html"><h3>Pošiljanje Mailov</h3></a>
+                            Pošiljanje HTML/CSS skripte velikemu številu prejemnikov preko Gmailovih serverjev. Za izbiro imam kar nekaj opcij. <br><br>
+                            <b>Jeziki:</b> Python, HTML in CSS <br>
+                        </div>
+                        <div class="serviceitem">
+                            <img src="slike/discord_bot.png" alt="Discord Bot" id="discord_bot">
+                            <h3>Discord Bot</h3>
+                            Discordov bot za vaš discord server z funkcijami/namenom po lastni izbiri. Bot lahko posluša za komande ali dogodke v serverju in počne mnoge stvari. <br><br>
+                            <b>Jeziki:</b> Python, NodeJS
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section" id="knowledge">
+                    <div class="seccontent">
+                        <h2>Znanje</h2>
+                        <p>Poznam in razumem naslednje programske jezike:</p>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Bootstrap</li>
+                            <li>JavaScript</li>
+                            <li>PHP</li>
+                            <li>NodeJS</li>
+                            <li>Python</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="section" id="contact">
+                    <div class="seccontent">
+                        <h2>Kontaktiraj me</h2>
+                        <p>Kontaktirate me lahko preko mnogih socialnih omrežij. Tukaj so tiste, kjer vam bom največ na voljo:</p>
+                        <ul>
+                            <li class="contact" onclick="myGmail()">Gmail <span id="gmail"></span></li>
+                            <li class="contact" onclick="myDiscord()">Discord <span id="discord"></span></li>
+                            <li class="contact" onclick="myInstagram()">Instagram <span id="instagram"></span></li>
+                            <li class="contact" onclick="mySnapchat()">Snapchat <span id="snapchat"></span></li>
+                        </ul>
+                        <span id="navodilo"><i><u>Pritisni na medij da pridobiš @!</u></i></span>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="section">
+                <h2 id="yttutoriali">Youtube Tutoriali</h2>
+            </div>
+            <div class="section">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <iframe src="https://www.youtube.com/embed/dDuFCnE3uOM" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+                    </div>
+                    <div class="mySlides fade">
+                        <iframe src="https://www.youtube.com/embed/VSZ2inGMb6Y" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+                    </div>
+                    <div class="mySlides fade">
+                        <iframe src="https://www.youtube.com/embed/Gl5ZFXH4uWA" frameborder="0" allow="accelerometer; encrypted-media; picture-in-picture" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <br>
+        <div class="footer">
+            <div class="footitems">
+                <div class="menu">
+                    <h3>Meni</h3>
+                    <a href="#about" class="menuitem">O meni</a> <br>
+                    <a href="#services" class="menuitem">Storitve</a> <br>
+                    <a href="#knowledge" class="menuitem">Znanje</a> <br>
+                    <a href="#contact" class="menuitem">Kontaktiraj me</a> <br>
+                    <a href="#yttutoriali" class="menuitem">YouTube Tutoriali</a> <br>
+                </div>
+                <div class="socials">
+                    <h3>Sledi mi</h3>
+                    <a href="https://www.youtube.com/channel/UCiVZFEJpSr1A0ul5M_BwU8g?sub_confirmation=1" class="menuitem" target="_blank">YouTube</a><br>
+                    <a href="https://www.instagram.com/zanvencelj/" class="menuitem" target="_blank">Instagram</a><br>
+                    <a class="menuitem" onclick="mySnapchatfoot()">Snapchat</a><span id="snapchatfoot"></span><br>
+                    <a class="menuitem" onclick="myDiscordfoot()">Discord</a><span id="discordfoot"></span><br>
+                </div>
+                <div class="sites">
+                    <h3>Strani</h3>
+                    <a href="https://naju.si" class="menuitem" target="_blank">Na-ju.si</a><br>
+                    <a href="#" class="menuitem">Več bo tu kmalu...</a><br>
+                </div>
+                <div class="clearboth"></div>
+                <br>
+            </div>
+            <div class="copy">
+                <b>&copy;2020</b> Žan Vencelj
+            </div>
+        </div>
+    </div>
+    <script>
+        function mySnapchatfoot() {
+            document.getElementById("snapchatfoot").innerHTML = "  @zanvencelj";
+        }
+        
+        function myDiscordfoot() {
+            document.getElementById("discordfoot").innerHTML = "  zanvencelj#8708";
+        }
+        
+        function myGmail() {
+            document.getElementById("gmail").innerHTML = " info.vencelj@gmail.com";
+        }
+        
+        function myDiscord() {
+            document.getElementById("discord").innerHTML = " zanvencelj#8708";
+        }
+        
+        function myInstagram() {
+            document.getElementById("instagram").innerHTML = " @zanvencelj";
+        }
+        
+        function mySnapchat() {
+            document.getElementById("snapchat").innerHTML = " @zanvencelj";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace("active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</body>
+</html>
